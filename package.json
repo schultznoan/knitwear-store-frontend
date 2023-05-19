@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "rm -rf dist && webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "build": "rm -rf dist && webpack --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,7 @@
     "@babel/preset-env": "^7.21.5",
     "babel-core": "^6.26.3",
     "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.1",
     "style-loader": "^3.3.2",

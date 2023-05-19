@@ -1,1 +1,1 @@
-import styles from '../assets/css/index.css'
+console.log('Init project')
