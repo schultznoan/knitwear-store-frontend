@@ -232,7 +232,7 @@
 
         fetch('https://api-knitwear.up.railway.app/categories').then((res) => {
             console.log(res)
-        })
+        }).catch(err => console.error(err))
 
         const a = `
             <div class="col">
