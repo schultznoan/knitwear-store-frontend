@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "start": "rm -rf dist && webpack --config webpack.prod.js --port ${PORT-3000}"
+    "start": "rm -rf dist && webpack --config webpack.prod.js --host xxx.xxx.xxx.xxx --port xxxx"
   },
   "repository": {
     "type": "git",
