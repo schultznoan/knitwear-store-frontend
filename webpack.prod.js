@@ -8,6 +8,10 @@ module.exports = () => {
         entry: {
             main: path.resolve(__dirname, './src/js/index.js')
         },
+        devServer: {
+            host: process.env.HOST || '0.0.0.0',
+            port: process.env.PORT || 9000
+        },
         module: {
             rules: [{
                 test: /\.js$/,
