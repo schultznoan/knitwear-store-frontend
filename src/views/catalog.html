@@ -256,7 +256,7 @@
                 }
 
                 if (e.target.dataset.type === 'checkout') {
-                    alert('Ау')
+                    onCheckout(form)
                 }
             })
 
@@ -307,6 +307,21 @@
             })
 
             products.innerHTML = productsHTML
+        }
+
+        const onCheckout = async (form) => {
+            try {
+                const res = await fetch('https://api-knitwear.up.railway.app/checkout', {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'POST',
+                    body: JSON.stringify(form)
+                })
+            } catch (err) {
+                console.error(err)
+            }
         }
 
         init()
