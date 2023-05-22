@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -8,7 +9,6 @@ module.exports = () => {
         entry: {
             main: path.resolve(__dirname, './src/js/index.js')
         },
-        port: process.env.PORT || 3000,
         module: {
             rules: [{
                 test: /\.js$/,
@@ -36,6 +36,11 @@ module.exports = () => {
                         to: path.resolve(__dirname, 'dist/assets')
                     }
                 ]
+            }),
+            new webpack.LoaderOptionsPlugin({
+                options: {
+                    port: process.env.PORT === '3000'
+                }
             })
         ]
     }
