@@ -1,5 +1,5 @@
 {
-  "name": "knitwear-store-frontend",
+  "name": "soft-navigator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -31,6 +31,5 @@
     "webpack": "^5.83.1",
     "webpack-cli": "^5.1.1",
     "webpack-dev-server": "^4.15.0"
-  },
-  "dependencies": {}
+  }
 }

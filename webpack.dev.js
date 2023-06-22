@@ -6,7 +6,7 @@ module.exports = () => {
     return {
         mode: 'development',
         entry: {
-            main: path.resolve(__dirname, './src/js/index.js')
+            main: path.resolve(__dirname, './src/index.js')
         },
         devServer: {
             open: true,
@@ -18,7 +18,7 @@ module.exports = () => {
         module: {
             rules: [{
                 test: /\.js$/,
-                include: path.resolve(__dirname, 'src/js'),
+                include: path.resolve(__dirname, 'src'),
                 use: ['babel-loader']
             },
             {
@@ -32,8 +32,16 @@ module.exports = () => {
                 template: 'src/views/index.html'
             }),
             new HtmlWebpackPlugin({
-                filename: 'catalog.html',
-                template: 'src/views/catalog.html'
+                filename: 'about.html',
+                template: 'src/views/about.html'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'checkout.html',
+                template: 'src/views/checkout.html'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'checkout-submit.html',
+                template: 'src/views/checkout-submit.html'
             }),
             new CopyWebpackPlugin({
                 patterns: [
